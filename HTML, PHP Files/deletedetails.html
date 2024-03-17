@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Flights</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Century Gothic', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(deletedetails.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  color: #333;
+  font-size: 48px;
+}
+
+.form-container {
+  text-align: center;
+}
+
+.form-container input[type="text"] {
+  width: calc(100% - 20px);
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+  padding: 12px 30px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.link-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link-container a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link-container a:hover {
+  color: #0056b3;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="title">
+    <h1>Delete Flights</h1>
+  </div>
+  <div class="form-container">
+    <form action="deleteadmindetails.php" method="POST">
+      <input type="text" placeholder="Enter Flight Code" name="flightcode" required>
+      <input type="submit" value="Delete" name="submit">
+    </form>
+  </div>
+  <div class="link-container">
+    <a href="adminchoice.html">Back to Admin Options</a>
+    <br>
+    <br>
+    <a href="homepage.html">Back to Home</a>
+  </div>
+</div>
+</body>
+</html>

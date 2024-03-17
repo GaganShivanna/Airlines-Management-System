@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMIN OPTIONS</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Emirates.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.6s ease;
+}
+
+header {
+  text-align: center;
+  color: #fff;
+}
+
+.main {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  font-size: 48px;
+  transition: color 0.3s ease;
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.choices a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.choices a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.buttons-container {
+  margin-top: 30px;
+}
+
+.buttons-container a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons-container a:hover {
+  background-color: #fff;
+  color: #000;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>ADMIN OPTIONS</h1>
+  </div>
+  <div class="choices">
+    <a href="viewflights.php">View Flights</a>
+    <a href="admin_form.html">Add Flights</a>
+    <a href="deletedetails.html">Delete Flights</a>
+    <a href="modifyadmindetails.html">Modify Flights</a>
+  </div>
+  <div class="buttons-container">
+    <a href="#" class="active">Admin</a>
+    <a href="homepage.html">Home</a>
+  </div>
+</header>
+</body>
+</html>

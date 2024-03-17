@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PASSENGER DETAILS</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(passenger_details1.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  text-align: right;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.title1{
+  text-align: top;
+  
+}
+
+.title h1 {
+  color: #fff;
+  font-size: 70px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+  width: calc(100% - 20px);
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+  padding: 12px 30px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin-top: 0 auto;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <ul>
+    <li><a href="searchflight.php">Check for Different Flights</a></li>
+    <li class="active"><a href="searchflight.html">Search for Different Destination</a></li>
+  </ul>
+</div>
+
+<div class="form-container">
+	<div class="title1">
+  <h1>PASSENGER DETAILS</h1>
+</div>
+  <p>Please fill in the following details:</p>
+  <form action="postpassengerdetails.php" method="post">
+    <div>
+      <input type="text" placeholder="First Name" name="firstname" required><br>
+    </div>
+    <div>
+      <input type="text" placeholder="Middle Name" name="middlename"><br>
+    </div>
+    <div>
+      <input type="text" placeholder="Last Name" name="lastname" required><br>
+    </div>
+    <div>
+      <input type="text" placeholder="Passport Number" name="passportnumber" required><br>
+    </div>
+    <div>
+      <input type="number" placeholder="Age" name="age" required><br>
+    </div>
+    <div>
+      <input type="text" placeholder="Sex (M/F/O)" name="Sex" required><br>
+    </div>
+    <div>
+      <input type="text" placeholder="Phone Number" name="phonenumber" required><br>
+    </div>
+    <div>
+      <input type="text" placeholder="Address" name="address" required><br>
+    </div>
+    <input type="submit" value="Submit" name="submit">
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Details</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Century Gothic;
+}
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(plane.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: powderblue; /* Beige background color */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button-group a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group a:hover {
+  background-color: #0056b3;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+ul li {
+  margin-left: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul li a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group {
+    margin-bottom: 10px;
+  }
+
+  .button-group a {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#" class="navbar-brand">Flight Details</a>
+  <div class="navbar-links">
+    <a href="adminchoice.html">Back To Admin options</a>
+    <a href="airlinescode.php">Airlines ID (Reference)</a>
+    <a href="homepage.html">Home</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="title">
+    <h1>Flight Details</h1>
+  </div>
+  
+  <form action="postadmindetails.php" method="post">
+    <input type="text" placeholder="Flight Code" name="flightcode" required>
+    <input type="text" placeholder="Airlines ID" name="airlinesid" required>
+    <input type="text" placeholder="Country" name="country" required>
+    <input type="text" placeholder="State" name="state" required>
+    <input type="text" placeholder="Airport Name" name="airportname" required>
+    <input type="text" placeholder="Source" name="source" required>
+    <input type="text" placeholder="Destination" name="destination" required>
+    <input type="text" placeholder="Departure" name="departure" required>
+    <input type="text" placeholder="Arrival" name="arrival" required>
+    <input type="text" placeholder="Duration" name="duration" required>
+    <input type="date" name="date" required>
+    <div class="buttons-container">
+      <div class="button-group">
+        <input type="number" placeholder="Economy Class" name="economyclass" required>
+        <input type="number" placeholder="Business Class" name="businessclass" required>
+        <input type="number" placeholder="For Students" name="students" required>
+        <input type="number" placeholder="For Differently Abled" name="diff" required>
+      </div>
+      <input type="submit" value="Submit" name="submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
